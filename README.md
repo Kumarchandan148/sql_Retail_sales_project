@@ -7,10 +7,10 @@ This project is designed to demonstrate SQL skills and techniques typically used
 <h3>Exploratory Data Analysis (EDA):</h3><p>Perform basic exploratory data analysis to understand the dataset.</p>
 <h3>Business Analysis:</h3> <p>Use SQL to answer specific business questions and derive insights from the sales data.</p>
 <h1>Project Structure</h1>
-<h2>1. Database Setup</h2>
-<p>Database Creation: The project starts by creating a database named p1_retail_db.
-Table Creation: A table named retail_sales is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
-CREATE DATABASE p1_retail_db;
+<ul>1. Database Setup
+<li>Database Creation: The project starts by creating a database named p1_retail_db.</li>
+<li>Table Creation: A table named retail_sales is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.</li>
+<li>CREATE DATABASE p1_retail_db;
 
 CREATE TABLE retail_sales
 (
@@ -25,7 +25,7 @@ CREATE TABLE retail_sales
     price_per_unit FLOAT,	
     cogs FLOAT,
     total_sale FLOAT
-);</p>
+);</li></ul>
 <h2>2. Data Exploration & Cleaning</h2>
 Record Count: Determine the total number of records in the dataset.
 Customer Count: Find out how many unique customers are in the dataset.
