@@ -2,11 +2,11 @@
 This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries. This project is ideal for those who are starting their journey in data analysis and want to build a solid foundation in SQL.
 
 <h1>Objectives</h1>
-<ol><b>Set up a retail sales database:</b> <li>Create and populate a retail sales database with the provided sales data.</li>
-<b>Data Cleaning:</b><li> Identify and remove any records with missing or null values.</li>
-<b>Exploratory Data Analysis (EDA):</b><li>Perform basic exploratory data analysis to understand the dataset.</li>
-<b>Business Analysis:</b> <li>Use SQL to answer specific business questions and derive insights from the sales data.</li>
-</ol>
+<h2>Set up a retail sales database:</h2> Create and populate a retail sales database with the provided sales data.
+<h2>Data Cleaning:</h2> Identify and remove any records with missing or null values.
+<h2>Exploratory Data Analysis (EDA):</h2>Perform basic exploratory data analysis to understand the dataset.
+<h2>Business Analysis:</h2> Use SQL to answer specific business questions and derive insights from the sales data.
+
 <h1>Project Structure</h1>
 <ul>1. Database Setup
 <li>Database Creation: The project starts by creating a database named retail_sales.</li>
