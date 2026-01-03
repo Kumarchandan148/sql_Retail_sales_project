@@ -28,30 +28,33 @@ FROM retail_sales
 WHERE sale_date = '2022-11-05';
 </pre>
 <br>
-Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than or equal to 4 in the month of Nov-2022:
-SELECT *
+<p>Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than or equal to 4 in the month of Nov-2022:</p>
+<pre>SELECT *
 FROM retail_sales
 WHERE category = 'Clothing'
   AND quantity >= 4
   AND MONTH(sale_date) = 11
   AND YEAR(sale_date) = 2022;
+  </pre>
   <br>
-Write a SQL query to calculate the total sales (total_sale) for each category.:
-SELECT 
+<p>Write a SQL query to calculate the total sales (total_sale) for each category.</p>
+<pre>SELECT 
     category,
     SUM(total_sale) as net_sale,
     COUNT(*) as total_orders
 FROM retail_sales
 GROUP BY category
+  </pre>
 <br>
-Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.:
-SELECT
+<p>Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.</p>
+<pre>SELECT
     ROUND(AVG(age), 2) as avg_age
 FROM retail_sales
 WHERE category = 'Beauty'
+  </pre>
 <br>
-Write a SQL query to find all transactions where the total_sale is greater than 1000.:
-SELECT * FROM retail_sales
+<p>Write a SQL query to find all transactions where the total_sale is greater than 1000.</p>
+<pre>SELECT * FROM retail_sales
 WHERE total_sale > 1000
 <br>
 Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category.:
@@ -64,9 +67,10 @@ GROUP BY
     category,
     gender
 ORDER BY category
+  </pre>
 <br>
-Write a SQL query to calculate the average sale for each month. Find out best selling month in each year:
-SELECT 
+<p>Write a SQL query to calculate the average sale for each month. Find out best selling month in each year.</p>
+<pre>SELECT 
     sales_year,
     sales_month,
     avg_sale
@@ -87,24 +91,27 @@ FROM
 ) as t1
 WHERE rnk = 1
 ORDER BY sales_year;
+  </pre>
 <br>
-**Write a SQL query to find the top 5 customers based on the highest total sales **:
-SELECT Top 5
+<p>Write a SQL query to find the top 5 customers based on the highest total sales :</p>
+<pre>SELECT Top 5
     customer_id,
     SUM(total_sale) as total_sales
 FROM retail_sales
 GROUP BY customer_id
 ORDER BY total_sales DESC
+  </pre>
 <br>
-Write a SQL query to find the number of unique customers who purchased items from each category.:
-SELECT 
+<p>Write a SQL query to find the number of unique customers who purchased items from each category.</p>
+<pre>SELECT 
     category,    
     COUNT(DISTINCT customer_id) as cnt_unique_cs
 FROM retail_sales
 GROUP BY category
+  </pre>
 <br>
-Write a SQL query to create each shift and number of orders (Example Morning <12, Afternoon Between 12 & 17, Evening >17):
-;WITH hourly_sale
+<p>Write a SQL query to create each shift and number of orders (Example Morning <12, Afternoon Between 12 & 17, Evening >17):</p>
+<pre>;WITH hourly_sale
 AS
 (
 SELECT *,
@@ -120,14 +127,24 @@ SELECT
     COUNT(*) as total_orders    
 FROM hourly_sale
 GROUP BY shift
+  </pre>
 <h1>Findings</h1>
-Customer Demographics: The dataset includes customers from various age groups, with sales distributed across different categories such as Clothing and Beauty.
-High-Value Transactions: Several transactions had a total sale amount greater than 1000, indicating premium purchases.
-Sales Trends: Monthly analysis shows variations in sales, helping identify peak seasons.
-Customer Insights: The analysis identifies the top-spending customers and the most popular product categories.
+<br>
+<b>Customer Demographics:</b> <p>The dataset includes customers from various age groups, with sales distributed across different categories such as Clothing and Beauty.</p>
+          <br>
+<b>High-Value Transactions:</b><p> Several transactions had a total sale amount greater than 1000, indicating premium purchases.</p>
+          <br>
+<b>Sales Trends:</b><p> Monthly analysis shows variations in sales, helping identify peak seasons.</p>
+          <br>
+<b>Customer Insights:</b><p> The analysis identifies the top-spending customers and the most popular product categories.</p>
+          <br>
 <h2>Reports</h2>
-Sales Summary: A detailed report summarizing total sales, customer demographics, and category performance.
-Trend Analysis: Insights into sales trends across different months and shifts.
-Customer Insights: Reports on top customers and unique customer counts per category.
+          <br>
+<b>Sales Summary:</b><p> A detailed report summarizing total sales, customer demographics, and category performance.</p>
+          <br>
+<b>Trend Analysis: </b><p>Insights into sales trends across different months and shifts.</p>
+          <br>
+<b>Customer Insights:</b><p> Reports on top customers and unique customer counts per category.</p>
+          <br>
 <h1>Conclusion</h1>
 This project serves as a comprehensive introduction to SQL for data analysts, covering database setup, data cleaning, exploratory data analysis, and business-driven SQL queries. The findings from this project can help drive business decisions by understanding sales patterns, customer behavior, and product performance.
