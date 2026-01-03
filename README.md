@@ -21,12 +21,12 @@ This project is designed to demonstrate SQL skills and techniques typically used
 <h1>3. Data Analysis & Findings</h1>
 <p>The following SQL queries were developed to answer specific business questions:</p>
 
-<div>
-Write a SQL query to retrieve all columns for sales made on '2022-11-05:
-SELECT *
+<br>
+<p>Write a SQL query to retrieve all columns for sales made on '2022-11-05:</p>
+<pre>SELECT *
 FROM retail_sales
 WHERE sale_date = '2022-11-05';
-  </div>
+</pre>
 <br>
 Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than or equal to 4 in the month of Nov-2022:
 SELECT *
