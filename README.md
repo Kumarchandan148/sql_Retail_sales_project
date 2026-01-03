@@ -19,8 +19,8 @@ This project is designed to demonstrate SQL skills and techniques typically used
 <p>Null Value Check: Check for any null values in the dataset and delete records with missing data.</p>
 
 <h1>3. Data Analysis & Findings</h1>
-The following SQL queries were developed to answer specific business questions:
-<br>
+<p>The following SQL queries were developed to answer specific business questions:</p>
+
 <div>
 Write a SQL query to retrieve all columns for sales made on '2022-11-05:
 SELECT *
